@@ -6,66 +6,81 @@ public abstract class Innlegg {
 	
 	// TODO - deklarering av objektvariable
 	
-	public Innlegg() {
-		
-	}
+    protected int id;
+    protected String bruker;
+    protected String dato;
+    protected int likes;
+
+    public Innlegg() {
+
+    }
 	
 	public Innlegg(int id, String bruker, String dato) {
 
 		// TODO 
-		throw new UnsupportedOperationException(TODO.constructor("Innlegg"));
+		//throw new UnsupportedOperationException(TODO.constructor("Innlegg"));
+        //
+
+        this.id = id;
+        this.bruker = bruker;
+        this.dato = dato;
 	}
 
 	public Innlegg(int id, String bruker, String dato, int likes) {
 
 		// TODO - START
 		
-		throw new UnsupportedOperationException(TODO.constructor("Innlegg"));
+		//throw new UnsupportedOperationException(TODO.constructor("Innlegg"));
+        this.id = id;
+        this.bruker = bruker;
+        this.dato = dato;
+        this.likes = likes;
 	}
 	
 	public String getBruker() {
 		
-		throw new UnsupportedOperationException(TODO.method());
+		//throw new UnsupportedOperationException(TODO.method());
+        return bruker;
 
 	}
 
 	public void setBruker(String bruker) {
-		throw new UnsupportedOperationException(TODO.method());
+        this.bruker = bruker;
 	}
 
 	public String getDato() {
-		throw new UnsupportedOperationException(TODO.method());
 		
+        return dato;
 	}
 
 	public void setDato(String dato) {
-		throw new UnsupportedOperationException(TODO.method());
+        this.dato = dato;
 	}
 
 	public int getId() {
-		throw new UnsupportedOperationException(TODO.method());
-
+        return id;
 	}
 
 	public int getLikes() {
-		throw new UnsupportedOperationException(TODO.method());
-
+        return likes;
 	}
 	
 	public void doLike () {
-		throw new UnsupportedOperationException(TODO.method());
+        likes++;
 	}
 	
 	public boolean erLik(Innlegg innlegg) {
-		throw new UnsupportedOperationException(TODO.method());
-
+        return this.id == innlegg.id;
 	}
 	
 	@Override
-	public String toString() {
-		
-		throw new UnsupportedOperationException(TODO.method());
-				
+	public String toString() {	
+        String idStr = Integer.toString(id) + "\n";
+        String brukerStr = bruker + "\n";
+        String datoStr = dato + "\n";
+        String likesStr = Integer.toString(likes) + "\n";
+
+        return idStr + brukerStr + datoStr + likesStr;
 	}
 	
 	// Metoden nedenfor er kun for valgfri oppgave 6
